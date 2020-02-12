@@ -15,39 +15,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buenos Aires" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-FU-tPN">
-                                <rect key="frame" x="83" y="248" width="248" height="260"/>
+                            <view contentMode="scaleToFill" id="FT0-HS-f8h" userLabel="Card">
+                                <rect key="frame" x="71" y="248" width="271" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the capital of Argentina?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-Yn-Qx0">
-                                <rect key="frame" x="83" y="248" width="248" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buenos Aires" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co4-ic-ceO" userLabel="Back Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="264"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the capital of Argentina?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-RJ-MaX" userLabel="Front Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="FHq-mT-nPg"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="hQO-SZ-Hqa" appends="YES" id="nIa-2R-vUu"/>
+                            <outletCollection property="gestureRecognizers" destination="uhe-19-D83" appends="YES" id="PPb-C3-u2A"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="backLabel" destination="7Dc-FU-tPN" id="8Nz-pt-T4t"/>
-                        <outlet property="frontLabel" destination="JxE-Yn-Qx0" id="G6K-dO-9zv"/>
+                        <outlet property="backLabel" destination="Co4-ic-ceO" id="ru3-iZ-nAF"/>
+                        <outlet property="card" destination="FT0-HS-f8h" id="jU6-6Z-yew"/>
+                        <outlet property="frontLabel" destination="Di4-RJ-MaX" id="OVF-Oe-cyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="hQO-SZ-Hqa">
+                <tapGestureRecognizer id="uhe-19-D83">
                     <connections>
-                        <action selector="didTapFlashcard:" destination="BYZ-38-t0r" id="hzE-nJ-QRm"/>
+                        <action selector="didTapCard:" destination="BYZ-38-t0r" id="cwY-Rh-psO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
