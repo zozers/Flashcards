@@ -37,9 +37,6 @@ class ViewController: UIViewController {
         buttonSetUp(button: button2)
         buttonSetUp(button: button3)
 
-
-
-
     }
 
     @IBAction func button1Press(_ sender: Any) {
